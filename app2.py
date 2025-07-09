@@ -1,4 +1,4 @@
-from flask import Flask, request,redirect, url_for,session,Response,render_template
+# from flask import Flask, request,redirect, url_for,session,Response,render_template
 # app = Flask(__name__)
 
 # @app.route('/')
@@ -66,27 +66,25 @@ from flask import Flask, request,redirect, url_for,session,Response,render_templ
 
 # if __name__ == '__main__':
 #     app.run(debug=True)
-app = Flask(__name__)
-@app.route("/")
-def login():
-    return render_template("login.html")
 
-@app.route("/submit", methods=['POST'])
-def submit():
-    username = request.form.get("username")
-    password = request.form.get("password")
 
-    if username == "Optimus" and password == "123":
-        return render_template("welcome.html", name = username)
-    
-    valid_users = {
-        "Optimus": "123",
-        "admin": "456",
-        "Nabs": "789"
-    }
+# from flask import Flask, render_templatef
 
-    if username in valid_users and valid_users[username] == password:
-        return render_template("welcome.html", name=username)
+# app = Flask(__name__)
 
-    else:
-        return "Invalid credentials, please try again."
+# @app.route("/")
+# def home():
+#     return render_template("profile.html")
+
+# @app.route("/about")
+# def about():
+#     return render_template("about.html")
+
+# @app.route("/contact")
+# def contact():
+#     return render_template("contact.html")
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+
